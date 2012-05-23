@@ -25,10 +25,10 @@ aliasing in your model by using `acts_as_aliased`:
       acts_as_aliased
     end
 
-This assumes a column called `name` on your company model. You can specify a different column by passing a `name` argument:
+This assumes a column called `name` on your company model. You can specify a different column by passing a `column` argument:
 
    model Company < ActiveRecord::Base
-     acts_as_aliased :name => 'title'
+     acts_as_aliased :column => 'title'
    end
 
 An alias can be created manually like this:
