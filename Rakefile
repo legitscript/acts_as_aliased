@@ -15,7 +15,7 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
 gem.name = "acts_as_aliased"
-  gem.homepage = "http://github.com/trusche/acts_as_aliased"
+  gem.homepage = "http://github.com/legitscript/acts_as_aliased"
   gem.license = "MIT"
   gem.summary = %Q{Alias names for your models}
   gem.description = %Q{Provides aliases and lookup methods for ActiveRecord models.}
