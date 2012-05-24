@@ -1,5 +1,4 @@
 # encoding: utf-8
-
 require 'rubygems'
 require 'bundler'
 begin
@@ -10,18 +9,18 @@ rescue Bundler::BundlerError => e
   exit e.status_code
 end
 require 'rake'
-
 require 'jeweler'
+
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-gem.name = "acts_as_aliased"
+  gem.name = "acts_as_aliased"
   gem.homepage = "http://github.com/legitscript/acts_as_aliased"
   gem.license = "MIT"
   gem.summary = %Q{Alias names for your models}
   gem.description = %Q{Provides aliases and lookup methods for ActiveRecord models.}
   gem.email = "thilo.rusche@legitscript.com"
   gem.authors = ["Thilo Rusche"]
-  gem.version = "0.0.4"
+  gem.version = "0.5.0"
   gem.files = FileList["[A-Z]*", "{lib,spec}/**/*"]
   gem.require_paths = ['lib']
 end
