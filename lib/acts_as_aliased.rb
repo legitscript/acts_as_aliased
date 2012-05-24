@@ -35,14 +35,22 @@ module ActsAsAliased
     def to_alias! aliased
       raise "Cannot create alias for myself" if aliased == self
       self.class.transaction do
+
+        # Move references to this instance from the provided associations to the
+        # newly aliased one
         a = ::ActsAsAliased::Alias.create(aliased: aliased, name: self[column])
         associations.each do |association|
           klass = association.to_s.classify.constantize
           key   = self.class.to_s.foreign_key
           klass.where(key => id).update_all(key => aliased.id)
         end
+
+        # Move references to this instance to the newly aliased one
+        Alias.where("aliased_type = ? AND aliased_id = ?", self.class.to_s, self.id).update_all(aliased_id: aliased.id)
+
+        # Poof!
         self.destroy
-        a
+        return a
       end
     end
   end

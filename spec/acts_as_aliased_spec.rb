@@ -4,6 +4,7 @@ describe "ActsAsAliased" do
 
   let(:company1) { Company.create(name: "Foo LLC") }
   let(:company2) { Company.create(name: "Foo") }
+  let(:company3) { Company.create(name: "Company Foo") }
   let(:department1) { Department.create(title: "Technical Staff") }
   let(:department2) { Department.create(title: "Techies") }
   let(:project1) { Project.create(name: "Project 1", company: company1, department: department1) }
@@ -70,6 +71,19 @@ describe "ActsAsAliased" do
 
       it "should work" do
         Department.lookup("Techies").should == department1
+      end
+    end
+
+    context "recursively" do
+      before(:each) do
+        clean_database
+        company3.to_alias!(company2)
+        company2.to_alias!(company1)
+      end
+
+      it "should reassign previsou alias" do
+        Company.lookup("Company Foo").should == company1
+        Company.lookup("Foo LLC").should == company1
       end
     end
   end
