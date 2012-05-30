@@ -20,7 +20,7 @@ Jeweler::Tasks.new do |gem|
   gem.description = %Q{Provides aliases and lookup methods for ActiveRecord models.}
   gem.email = "thilo.rusche@legitscript.com"
   gem.authors = ["Thilo Rusche"]
-  gem.version = "0.0.6"
+  gem.version = "0.0.7"
   gem.files = FileList["[A-Z]*", "{lib,spec}/**/*"]
   gem.require_paths = ['lib']
 end

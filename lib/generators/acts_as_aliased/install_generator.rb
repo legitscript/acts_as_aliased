@@ -10,7 +10,7 @@ module ActsAsAliased
 
     def create_migration_file
       puts "Adding a migration..."
-      migration_template 'migration.rb', 'db/migrate/create_acts_as_alias_table.rb' rescue puts $!.message
+      migration_template 'migration.rb', 'db/migrate/create_acts_as_aliased_table.rb' rescue puts $!.message
     end
 
   end
