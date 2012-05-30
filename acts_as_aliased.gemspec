@@ -5,24 +5,22 @@
 
 Gem::Specification.new do |s|
   s.name = "acts_as_aliased"
-  s.version = "0.0.4"
+  s.version = "0.0.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Thilo Rusche"]
-  s.date = "2012-05-23"
+  s.date = "2012-05-30"
   s.description = "Provides aliases and lookup methods for ActiveRecord models."
   s.email = "thilo.rusche@legitscript.com"
   s.extra_rdoc_files = [
     "LICENSE.txt",
-    "README.md",
-    "README.rdoc"
+    "README.md"
   ]
   s.files = [
     "Gemfile",
     "Gemfile.lock",
     "LICENSE.txt",
     "README.md",
-    "README.rdoc",
     "Rakefile",
     "lib/acts_as_aliased.rb",
     "lib/generators/acts_as_aliased/install_generator.rb",
@@ -30,10 +28,10 @@ Gem::Specification.new do |s|
     "spec/acts_as_aliased_spec.rb",
     "spec/spec_helper.rb"
   ]
-  s.homepage = "http://github.com/trusche/acts_as_aliased"
+  s.homepage = "http://github.com/legitscript/acts_as_aliased"
   s.licenses = ["MIT"]
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.21"
+  s.rubygems_version = "1.8.10"
   s.summary = "Alias names for your models"
 
   if s.respond_to? :specification_version then
