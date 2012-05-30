@@ -3,6 +3,8 @@ acts_as_aliased
 
 Extends `ActiveRecord::Base` with a mechanism to create aliases for resources.
 
+THIS IS ALPHA SOFTWARE AND SHOULD BE USED WITH CARE.
+
 Installation
 ------------
 

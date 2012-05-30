@@ -1,4 +1,4 @@
-class CreatesActsAsAliasedTable < ActiveRecord::Migration
+class CreateActsAsAliasedTable < ActiveRecord::Migration
   def change
     create_table :aliases do |t|
       t.integer :aliased_id,    null: false
