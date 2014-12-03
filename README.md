@@ -84,6 +84,6 @@ Finally, to find a model by it's alias, acts_as_aliased implements a `lookup` cl
 
 ### Copyright
 
-Copyright (c) 2012-2014 LegitScript. See LICENSE.txt for
+Copyright (c) 2012 LegitScript. See LICENSE.txt for
 further details.
 
